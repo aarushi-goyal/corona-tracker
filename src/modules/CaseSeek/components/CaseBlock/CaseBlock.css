@@ -1,0 +1,28 @@
+
+.cross-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* ------------------------------------------- */
+
+.jobRow {
+  display: inline-block;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+  padding: 0px 10px; 
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.09);
+  min-width: 250px;
+  margin: 10px;
+}
+
+.jobRow p {
+  font-weight: bold;
+  min-height: 22px;
+}
+
+a {
+  color: #4b4b4b;
+}

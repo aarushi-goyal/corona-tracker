@@ -1,0 +1,20 @@
+.txt-color {
+  color: rgb(75, 75, 75);
+}
+
+
+.greentxt {
+  color: #97ab60;
+}
+
+.grey_txt {
+  color: #888;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+.white_txt {
+  color: #fff;
+}
