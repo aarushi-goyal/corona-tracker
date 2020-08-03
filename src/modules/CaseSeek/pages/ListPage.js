@@ -24,7 +24,7 @@ class CaseSeek extends React.Component {
       <CaseFeedWrapper>
         <PageContentWrapper>
           <CaseFeed />
-          <SideBar />
+          {/* <SideBar /> */}
         </PageContentWrapper>
       </CaseFeedWrapper>
     )

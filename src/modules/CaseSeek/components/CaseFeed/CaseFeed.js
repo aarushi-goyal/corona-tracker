@@ -16,7 +16,6 @@ const Wrapper = styled.div`
   display: inline-block;
   vertical-align: top;
   position: relative;
-  width: 70%
 
   @media screen and (max-width: 1023px) {
     width: 100%;
@@ -96,8 +95,8 @@ class CaseFeed extends Component {
               <CaseBlock title={'Total Recovered'} number={caseData['new_cured']} />
               <CaseBlock title={'Total Deaths'} number={caseData['new_death']} />
               <div className='jobRow col-lg-3 col-sm-3 col-xs-3'>
-                <p>Recovery Rate: {(caseData['new_cured'] * 100 / caseData['new_positive']).toFixed(2)}%</p>
-                <p>Death Rate: {(caseData['new_death'] * 100 / caseData['new_positive']).toFixed(2)}%</p>
+                <p>Recovery Rate: {state ? (caseData['new_cured'] * 100 / caseData['new_positive']).toFixed(2) : '0'}%</p>
+                <p>Death Rate: {state ? (caseData['new_death'] * 100 / caseData['new_positive']).toFixed(2) : '0'}%</p>
               </div>
             </div>
           </div>

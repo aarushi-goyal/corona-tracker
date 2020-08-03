@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { fetchCaseFeeds } from './actions';
-const API_URL = 'http://www.mohfw.gov.in/data/datanew.json';
+const API_URL = 'https://wrapper-service.herokuapp.com/cases';
 
 export function getCaseFeeds() {
   return function(dispatch) {
-    axios.get('http://localhost:8001/cases')
+    axios.get(API_URL)
     .then(json => {
       dispatch(fetchCaseFeeds(json.data));
       return 1;
@@ -12,7 +12,7 @@ export function getCaseFeeds() {
       console.log(err, '=======error====');
     })
     setInterval(() => {
-      axios.get('http://localhost:8001/cases')
+      axios.get(API_URL)
       .then(json => {
         dispatch(fetchCaseFeeds(json.data));
         return 1;
