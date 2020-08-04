@@ -104,31 +104,31 @@ class CaseFeed extends Component {
           <div>
             <h1 className='filter-heading'>State wise statistics of India</h1>
             <div className='distribution row'>
-              <div className='col-lg-6 bold'>
+              <div className='col-lg-6 col-sm-6 bold'>
                 DISTRICT
               </div>
-              <div className='col-lg-2 bold'>
+              <div className='col-lg-2 col-sm-2 bold'>
                 CNFRM
               </div>
-              <div className='col-lg-2 bold'>
+              <div className='col-lg-2 col-sm-2 bold'>
                 RCVRD
               </div>
-              <div className='col-lg-2 bold'>
+              <div className='col-lg-2 col-sm-2 bold'>
                 DEAD
               </div>
             </div>
             {map(caseFeed, option => (
               <div className='distribution row'>
-                <div className='col-lg-6'>
+                <div className='col-lg-6 col-sm-6'>
                   {option.state_name || 'India'}
                 </div>
-                <div className='col-lg-2'>
+                <div className='col-lg-2 col-sm-2'>
                   {option.new_positive}
                 </div>
-                <div className='col-lg-2'>
+                <div className='col-lg-2 col-sm-2'>
                   {option.new_cured}
                 </div>
-                <div className='col-lg-2'>
+                <div className='col-lg-2 col-sm-2'>
                   {option.new_death}
                 </div>
               </div>
