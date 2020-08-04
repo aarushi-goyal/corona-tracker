@@ -105,7 +105,7 @@ class CaseFeed extends Component {
             <h1 className='filter-heading'>State wise statistics of India</h1>
             <div className='distribution row'>
               <div className='col-lg-6 col-sm-6 bold'>
-                DISTRICT
+                STATE
               </div>
               <div className='col-lg-2 col-sm-2 bold'>
                 CNFRM

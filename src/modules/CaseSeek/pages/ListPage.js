@@ -9,6 +9,10 @@ const CaseFeedWrapper = styled.div`
 const PageContentWrapper = styled.div`
   min-height: 600px;
   padding: 50px;
+
+  @media only screen and (max-width: 425px) {
+    padding: 25px;
+  }
 `;
 
 const SideBar = styled.div`

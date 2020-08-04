@@ -16,6 +16,8 @@
   box-shadow: 0 5px 15px 0 rgba(0,0,0,.09);
   min-width: 250px;
   margin: 10px;
+  background: steelblue;
+  border-radius: 10px;
 }
 
 .jobRow p {
