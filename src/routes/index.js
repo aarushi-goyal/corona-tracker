@@ -11,7 +11,7 @@ export default (
     <div>
       <AppHeader push={history.push} />
       <Route path={CASE_FEED_ROUTE} exact component={CaseSeek} />
-      {/* <Redirect from={BASE_ROUTE} to={CASE_FEED_ROUTE} /> */}
+      <Redirect from={BASE_ROUTE} to={CASE_FEED_ROUTE} />
     </div>
   </Router>
 );

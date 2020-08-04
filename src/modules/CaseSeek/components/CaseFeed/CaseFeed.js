@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { createStructuredSelector } from 'reselect';
 import { connect } from 'react-redux';
+import map from 'lodash/map';
 
 import { getCaseFeed } from '../../selectors';
 import './CaseFeed.css';
@@ -99,6 +100,39 @@ class CaseFeed extends Component {
                 <p>Death Rate: {state ? (caseData['new_death'] * 100 / caseData['new_positive']).toFixed(2) : '0'}%</p>
               </div>
             </div>
+          </div>
+          <div>
+            <h1 className='filter-heading'>State wise statistics of India</h1>
+            <div className='distribution row'>
+              <div className='col-lg-6 bold'>
+                DISTICT
+              </div>
+              <div className='col-lg-2 bold'>
+                CNFRM
+              </div>
+              <div className='col-lg-2 bold'>
+                RCVRD
+              </div>
+              <div className='col-lg-2 bold'>
+                DEAD
+              </div>
+            </div>
+            {map(caseFeed, option => (
+              <div className='distribution row'>
+                <div className='col-lg-6'>
+                  {option.state_name || 'India'}
+                </div>
+                <div className='col-lg-2'>
+                  {option.new_positive}
+                </div>
+                <div className='col-lg-2'>
+                  {option.new_cured}
+                </div>
+                <div className='col-lg-2'>
+                  {option.new_death}
+                </div>
+              </div>
+            ))}
           </div>
         </Wrapper>
       );
