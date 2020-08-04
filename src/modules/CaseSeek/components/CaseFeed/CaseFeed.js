@@ -117,8 +117,8 @@ class CaseFeed extends Component {
                 DEAD
               </div>
             </div>
-            {map(caseFeed, option => (
-              <div className='distribution row'>
+            {map(caseFeed, (option, index) => (
+              <div className='distribution row' key={index}>
                 <div className='col-lg-6 col-sm-6'>
                   {option.state_name || 'India'}
                 </div>
