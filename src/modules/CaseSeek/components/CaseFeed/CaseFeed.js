@@ -66,7 +66,7 @@ class CaseFeed extends Component {
     const { caseFeed }= this.props;
     const { state, showDropdown, caseData } = this.state;
     console.log(caseFeed, '=====casefeed====');
-    let caseList = caseFeed.find(data => data.sno == '11111');
+    let caseList = caseFeed.find(data => data.sno === '11111');
     if (caseList) {
       return (
         <Wrapper>
@@ -83,7 +83,7 @@ class CaseFeed extends Component {
           <div className='filter-by-state'>
             <h1 className='filter-heading'>Filter by State</h1>
             <div className='filter-label' onClick={this.openDropdown}>
-              <span>{state ? stateOptions.find(s => s.id == state).name :  'Select State'}</span>
+              <span>{state ? stateOptions.find(s => s.id === state).name :  'Select State'}</span>
             </div>
             {showDropdown && <Dropdown
               options={stateOptions}

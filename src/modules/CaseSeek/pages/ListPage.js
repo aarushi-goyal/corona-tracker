@@ -15,12 +15,12 @@ const PageContentWrapper = styled.div`
   }
 `;
 
-const SideBar = styled.div`
-  width: 30%;
-  @media only screen and (max-width: 1023px) {
-    display: none;
-  }
-`;
+// const SideBar = styled.div`
+//   width: 30%;
+//   @media only screen and (max-width: 1023px) {
+//     display: none;
+//   }
+// `;
 
 class CaseSeek extends React.Component {
   render() {
