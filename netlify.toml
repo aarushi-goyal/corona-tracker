@@ -1,3 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "/opt/build/repo/distdist"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
