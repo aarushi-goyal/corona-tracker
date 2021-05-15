@@ -57,9 +57,10 @@ class CaseFeed extends Component {
 
   onClickState = value => (e) => {
     e.preventDefault();
+    console.log(e.target.value, '===', typeof(e.target.value));
     const { caseFeed } = this.props;
     this.setState({ state: e.target.value })
-    this.setState({ caseData: caseFeed.find(data => data.sno == e.target.value )})
+    this.setState({ caseData: caseFeed.find(data => data.sno === JSON.stringify(e.target.value) )})
   }
 
   render() {
